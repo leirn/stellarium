@@ -1019,8 +1019,7 @@ void StelLocationMgr::positionUpdatedFromOS(const QGeoPositionInfo &info)
         //loc.population = 0;
         // TODO: Consider LP map lookup?
         //loc.lightPollutionLuminance = StelLocation::DEFAULT_LIGHT_POLLUTION_LUMINANCE;
-        // TODO: Find IANA timezone name from OS!
-        //loc.ianaTimeZone = ...
+		loc.ianaTimeZone = QTimeZone::systemTimeZoneId();
         loc.planetName = "Earth";
         loc.landscapeKey = "";
 
